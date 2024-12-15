@@ -1,0 +1,64 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {}
+    },
+    "teststeps": [
+        {
+            "name": "/mcp/pc/pcsearch",
+            "request": {
+                "url": "https://ug.baidu.com/mcp/pc/pcsearch",
+                "method": "POST",
+                "headers": {
+                    "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+                    "sec-ch-ua-platform": "\"Windows\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+                    "Content-Type": "application/json",
+                    "Sec-Fetch-Site": "same-site",
+                    "Sec-Fetch-Mode": "cors",
+                    "Sec-Fetch-Dest": "empty"
+                },
+                "json": {
+                    "invoke_info": {
+                        "pos_1": [
+                            {}
+                        ],
+                        "pos_2": [
+                            {}
+                        ],
+                        "pos_3": [
+                            {}
+                        ]
+                    }
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                },
+                {
+                    "eq": [
+                        "headers.Content-Type",
+                        "application/json; charset=utf-8"
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.errno",
+                        0
+                    ]
+                },
+                {
+                    "eq": [
+                        "content.errmsg",
+                        "ok"
+                    ]
+                }
+            ]
+        }
+    ]
+}
