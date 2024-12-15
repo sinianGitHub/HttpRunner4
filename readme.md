@@ -9,6 +9,9 @@
 ```shell
 har2case demo/har/Baidu.har 
 ```
+```shell
+httprunner make demo/har/Baidu.json 
+```
 
 ```shell
 har2case demo/har/Baidu.har -2y
@@ -30,6 +33,3 @@ hrp convert --from-yaml E:\work5-2\HttpRunner_demo\testcases\test_login_test.yam
 hrp convert --from-har demo/har/Baidu.har --to-pytest --output-dir demo/testcases
 ```
 
-```shell
-httprunner make demo/har/Baidu.json
-```
