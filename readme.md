@@ -31,5 +31,5 @@ hrp convert --from-har demo/har/Baidu.har --to-pytest --output-dir demo/testcase
 ```
 
 ```shell
-httprunner make E:\work5-2\HttpRunner_demo\testcases\test_login_test.yaml
+httprunner make demo/har/Baidu.json
 ```
